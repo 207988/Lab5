@@ -2,6 +2,7 @@ package application;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -108,7 +109,8 @@ public class RuzzleController {
     		i++; 		
     	}
     	ruzzle.calcolaParole();
-    	List<Parola>finale=new ArrayList<Parola>(ruzzle.getRisultato());    	
+    	List<Parola>finale=new ArrayList<Parola>(ruzzle.getRisultato());  
+    	Collections.sort(finale);
     	
     	listParole.getItems().addAll(finale);
     	

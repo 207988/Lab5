@@ -3,7 +3,7 @@ package it.polito.tdp.ruzzle.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Parola {
+public class Parola implements Comparable<Parola>{
 
 	private String s;
 	private List<Lettera>lettere=new ArrayList<Lettera>();;
@@ -50,6 +50,10 @@ public class Parola {
 		} else if (!s.equals(other.s))
 			return false;
 		return true;
+	}
+	@Override
+	public int compareTo(Parola arg0) {		
+		return this.s.length()-arg0.s.length();
 	}
 	
 	
