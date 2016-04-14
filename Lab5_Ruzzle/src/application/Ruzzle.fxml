@@ -184,7 +184,7 @@
                         <Button fx:id="btnGenera" mnemonicParsing="false" onAction="#doGenera" text="Genera" />
                      </children>
                   </HBox>
-                  <ListView fx:id="listParole" prefHeight="200.0" prefWidth="200.0" />
+                  <ListView fx:id="listParole" onMouseClicked="#doClick" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </VBox>
          </children>

@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 
+import com.sun.prism.paint.Color;
+
 import it.polito.tdp.ruzzle.model.Lettera;
 import it.polito.tdp.ruzzle.model.Parola;
 import it.polito.tdp.ruzzle.model.Posizione;
@@ -17,11 +19,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
 
 public class RuzzleController {
 
-	private List<Label> mappaCaratteri=new ArrayList<Label>();
+	private Map<Posizione,Label> mappaCaratteri=new LinkedHashMap<Posizione,Label>();
 	private RuzzleModel ruzzle;
+	private List<Posizione>listParTemp=new ArrayList<Posizione>();
 	
 	public void setModel(RuzzleModel model){
 		ruzzle=model;
@@ -93,18 +97,40 @@ public class RuzzleController {
     	ruzzle.genera();
     	Map<Posizione,Lettera>mappa=new LinkedHashMap<Posizione,Lettera>(ruzzle.getMappa());
     	List<Lettera>temp=new ArrayList<Lettera>();
-    	int i=0;
+    	int i=1;
+    	int j=1;
     	for(Lettera l:mappa.values()){
-    		mappaCaratteri.get(i).setText(l.toString());
+    		if(i==5){
+    			i=1;
+    			j++;
+    		}
+    		mappaCaratteri.get(new Posizione(j,i)).setText(l.toString());    		
     		i++; 		
     	}
     	ruzzle.calcolaParole();
-    	List<Parola>finale=new ArrayList<Parola>(ruzzle.getRisultato());
+    	List<Parola>finale=new ArrayList<Parola>(ruzzle.getRisultato());    	
     	
     	listParole.getItems().addAll(finale);
     	
     	
 
+    }
+    @FXML
+    void doClick(MouseEvent event) {
+    	for(Posizione p:listParTemp){
+    		mappaCaratteri.get(p).setStyle("-fx-background-color:green");
+    	}
+    	listParTemp.clear();
+    	
+    	//System.out.println("CLICK");
+    	//PRENDO LE CASELLE DELLA PAROLA SELEZIONATA    	
+    	System.out.println(listParole.getSelectionModel().getSelectedItem());
+    	listParTemp.addAll(listParole.getSelectionModel().getSelectedItem().caselle());
+    	
+    	for(Posizione p:listParTemp){
+    		mappaCaratteri.get(p).setStyle("-fx-background-color:red");
+    	}
+    	
     }
 
     @FXML
@@ -128,22 +154,24 @@ public class RuzzleController {
         assert btnGenera != null : "fx:id=\"btnGenera\" was not injected: check your FXML file 'Ruzzle.fxml'.";
         assert listParole != null : "fx:id=\"listParole\" was not injected: check your FXML file 'Ruzzle.fxml'.";
         
-        mappaCaratteri.add(lbl1);
-        mappaCaratteri.add(lbl2);
-        mappaCaratteri.add(lbl3);
-        mappaCaratteri.add(lbl4);
-        mappaCaratteri.add(lbl5);
-        mappaCaratteri.add(lbl6);
-        mappaCaratteri.add(lbl7);
-        mappaCaratteri.add(lbl8);
-        mappaCaratteri.add(lbl9);
-        mappaCaratteri.add(lbl10);
-        mappaCaratteri.add(lbl11);
-        mappaCaratteri.add(lbl12);
-        mappaCaratteri.add(lbl13);
-        mappaCaratteri.add(lbl14);
-        mappaCaratteri.add(lbl15);
-        mappaCaratteri.add(lbl16);
+        mappaCaratteri.put(new Posizione(1,1),lbl1);
+        mappaCaratteri.put(new Posizione(1,2),lbl2);
+        mappaCaratteri.put(new Posizione(1,3),lbl3);
+        mappaCaratteri.put(new Posizione(1,4),lbl4);
+        mappaCaratteri.put(new Posizione(2,1),lbl5);
+        mappaCaratteri.put(new Posizione(2,2),lbl6);
+        mappaCaratteri.put(new Posizione(2,3),lbl7);
+        mappaCaratteri.put(new Posizione(2,4),lbl8);
+        mappaCaratteri.put(new Posizione(3,1),lbl9);
+        mappaCaratteri.put(new Posizione(3,2),lbl10);
+        mappaCaratteri.put(new Posizione(3,3),lbl11);
+        mappaCaratteri.put(new Posizione(3,4),lbl12);
+        mappaCaratteri.put(new Posizione(4,1),lbl13);
+        mappaCaratteri.put(new Posizione(4,2),lbl14);
+        mappaCaratteri.put(new Posizione(4,3),lbl15);
+        mappaCaratteri.put(new Posizione(4,4),lbl16);
+        
+       
        
         
         
