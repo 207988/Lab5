@@ -13,8 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="application.RuzzleController">
+<BorderPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RuzzleController">
    <center>
       <HBox spacing="10.0" BorderPane.alignment="CENTER">
          <children>
@@ -34,7 +33,7 @@
                <children>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <children>
-                        <Label fx:id="lbl2" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lbl2" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -43,7 +42,7 @@
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="lbl1" alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lbl1" alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -52,7 +51,7 @@
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                      <children>
-                        <Label fx:id="lbl5" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lbl5" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -61,7 +60,7 @@
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                      <children>
-                        <Label fx:id="lbl9" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lbl9" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -70,7 +69,7 @@
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
                      <children>
-                        <Label fx:id="lbl13" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="14.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lbl13" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="14.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -79,7 +78,7 @@
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <children>
-                        <Label fx:id="lbl6" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lbl6" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -88,7 +87,7 @@
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <children>
-                        <Label fx:id="lbl10" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lbl10" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -97,7 +96,7 @@
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <children>
-                        <Label fx:id="lbl14" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lbl14" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -106,7 +105,7 @@
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                      <children>
-                        <Label fx:id="lbl3" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lbl3" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -115,7 +114,7 @@
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <children>
-                        <Label fx:id="lbl7" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lbl7" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -124,7 +123,7 @@
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <children>
-                        <Label fx:id="lbl11" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lbl11" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -133,7 +132,7 @@
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
                      <children>
-                        <Label fx:id="lbl15" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lbl15" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -142,7 +141,7 @@
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
                      <children>
-                        <Label fx:id="lbl4" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lbl4" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -151,7 +150,7 @@
                   </Pane>
                   <Pane style="-fx-border-width: 2px;" GridPane.columnIndex="3" GridPane.rowIndex="1">
                      <children>
-                        <Label fx:id="lbl8" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lbl8" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -160,7 +159,7 @@
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
                      <children>
-                        <Label fx:id="lbl12" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lbl12" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -169,7 +168,7 @@
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
                      <children>
-                        <Label fx:id="lbl16" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lbl16" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="11.0" prefHeight="37.0" prefWidth="47.0" style="-fx-background-color: green;" text="Label" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>

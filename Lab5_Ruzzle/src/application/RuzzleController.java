@@ -1,7 +1,17 @@
 package application;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
+
+import it.polito.tdp.ruzzle.model.Lettera;
+import it.polito.tdp.ruzzle.model.Parola;
+import it.polito.tdp.ruzzle.model.Posizione;
+import it.polito.tdp.ruzzle.model.RuzzleModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,7 +20,12 @@ import javafx.scene.control.ListView;
 
 public class RuzzleController {
 
-	private String s="";
+	private List<Label> mappaCaratteri=new ArrayList<Label>();
+	private RuzzleModel ruzzle;
+	
+	public void setModel(RuzzleModel model){
+		ruzzle=model;
+	}
 	
     @FXML
     private ResourceBundle resources;
@@ -70,10 +85,25 @@ public class RuzzleController {
     private Button btnGenera;
 
     @FXML
-    private ListView<?> listParole;
+    private ListView<Parola> listParole;
 
     @FXML
     void doGenera(ActionEvent event) {
+    	//POPOLAZIONE MAPPA
+    	ruzzle.genera();
+    	Map<Posizione,Lettera>mappa=new LinkedHashMap<Posizione,Lettera>(ruzzle.getMappa());
+    	List<Lettera>temp=new ArrayList<Lettera>();
+    	int i=0;
+    	for(Lettera l:mappa.values()){
+    		mappaCaratteri.get(i).setText(l.toString());
+    		i++; 		
+    	}
+    	ruzzle.calcolaParole();
+    	List<Parola>finale=new ArrayList<Parola>(ruzzle.getRisultato());
+    	
+    	listParole.getItems().addAll(finale);
+    	
+    	
 
     }
 
@@ -97,6 +127,27 @@ public class RuzzleController {
         assert lbl16 != null : "fx:id=\"lbl16\" was not injected: check your FXML file 'Ruzzle.fxml'.";
         assert btnGenera != null : "fx:id=\"btnGenera\" was not injected: check your FXML file 'Ruzzle.fxml'.";
         assert listParole != null : "fx:id=\"listParole\" was not injected: check your FXML file 'Ruzzle.fxml'.";
+        
+        mappaCaratteri.add(lbl1);
+        mappaCaratteri.add(lbl2);
+        mappaCaratteri.add(lbl3);
+        mappaCaratteri.add(lbl4);
+        mappaCaratteri.add(lbl5);
+        mappaCaratteri.add(lbl6);
+        mappaCaratteri.add(lbl7);
+        mappaCaratteri.add(lbl8);
+        mappaCaratteri.add(lbl9);
+        mappaCaratteri.add(lbl10);
+        mappaCaratteri.add(lbl11);
+        mappaCaratteri.add(lbl12);
+        mappaCaratteri.add(lbl13);
+        mappaCaratteri.add(lbl14);
+        mappaCaratteri.add(lbl15);
+        mappaCaratteri.add(lbl16);
+       
+        
+        
+        
         //SELECT NOME FROM PAROLA WHERE NOME LIKE "av%"
     }
 }
