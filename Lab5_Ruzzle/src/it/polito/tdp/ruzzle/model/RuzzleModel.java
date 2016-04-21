@@ -31,6 +31,7 @@ public class RuzzleModel {
 
 
 	public void genera(){
+		risultati.clear();
 		Random r = new Random();
 		String abc = "ABCDEFGHILMNOPQRSTUVZ";
 		for(int i=1;i<=4;i++){

@@ -95,6 +95,7 @@ public class RuzzleController {
     @FXML
     void doGenera(ActionEvent event) {
     	//POPOLAZIONE MAPPA
+    	listParole.getItems().clear();
     	ruzzle.genera();
     	Map<Posizione,Lettera>mappa=new LinkedHashMap<Posizione,Lettera>(ruzzle.getMappa());
     	List<Lettera>temp=new ArrayList<Lettera>();
@@ -115,10 +116,15 @@ public class RuzzleController {
     	listParole.getItems().addAll(finale);
     	
     	
+    	
 
     }
     @FXML
     void doClick(MouseEvent event) {
+    	if(listParole.getItems().size()==0){
+    		System.out.println("PRIMA DEVI GENERARE");
+    		return;
+    	}
     	for(Posizione p:listParTemp){
     		mappaCaratteri.get(p).setStyle("-fx-background-color:green");
     	}

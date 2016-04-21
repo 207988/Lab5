@@ -9,7 +9,8 @@ public class Parola implements Comparable<Parola>{
 	private List<Lettera>lettere=new ArrayList<Lettera>();;
 	public Parola(String s, List<Lettera> lettere) {
 		super();
-		this.s = s;		
+		this.s = s;	
+		//this.lettere=lettere;
 		this.lettere.addAll(lettere);
 	}
 	public String getS() {
